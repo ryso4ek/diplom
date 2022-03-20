@@ -1,0 +1,285 @@
+*{padding: 0;margin: 0;border: 0;}*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}:focus, :active{outline: none;}a:focus, a:active{outline: none;}nav,footer,header,aside{display:block;}html,body{height: 100%;width: 100%;font-size: 100%;line-height: -1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}input,button,textarea{font-family: inherit;}input::-ms-clear{display: none;}button{cursor: pointer;}button::-moz-focus-inner{padding: 0; border: 0;}a, a:visited{text-decoration: 0;}a:hover{text-decoration: none;}ul li{list-style: none;}img{vertical-align: top;}h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+
+.preloader {
+	/*фиксированное позиционирование*/
+	position: fixed;
+	/* координаты положения */
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	/* фоновый цвет элемента */
+	background: #e0e0e0;
+	/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+	z-index: 1001;
+ }
+ 
+ .preloader__row {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	margin-top: -35px;
+	margin-left: -35px;
+	text-align: center;
+	animation: preloader-rotate 2s infinite linear;
+ }
+ 
+ .preloader__item {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	background-color: #337ab7;
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	animation: preloader-bounce 2s infinite ease-in-out;
+ }
+ 
+ .preloader__item:last-child {
+	top: auto;
+	bottom: 0;
+	animation-delay: -1s;
+ }
+ 
+ @keyframes preloader-rotate {
+	100% {
+	  transform: rotate(360deg);
+	}
+ }
+ 
+ @keyframes preloader-bounce {
+ 
+	0%,
+	100% {
+	  transform: scale(0);
+	}
+ 
+	50% {
+	  transform: scale(1);
+	}
+ }
+ 
+ .loaded_hiding .preloader {
+	transition: 0.3s opacity;
+	opacity: 0;
+ }
+ 
+ .loaded .preloader {
+	display: none;
+ }
+
+
+body{
+	font-family: 'Lora', serif;
+	color: white;
+}
+a{
+	color: white;
+}
+.main{
+background-image: url(../img/back.jpg);
+height: 800px;
+background-size: cover;
+}
+.nav{
+	padding: 50px 0 0 140px;
+}
+.logo{
+	display: inline-block;
+	margin: 0 180px 0 0;
+}
+.list{
+	font-size: 15px;
+	display: inline-block;
+	letter-spacing: 0.10em;
+}
+.nav__list{
+	display: inline-block;
+	margin: 0 25px;
+}
+.nav__list{
+	color: rgb(1, 173, 1);
+}
+
+.nav__list{
+	position: relative;
+	color: #ffffff; 
+	cursor: pointer;
+	line-height: 1; 
+	text-decoration: none; 
+}
+.nav__list::after{
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 2px;
+	background-color: #ffffff;
+	content: "";
+	transition: width 0.3s ease-out; 
+}
+.nav__list:hover:after,
+.nav__list:focus:after {
+	width: 100%; 
+}
+.content{
+	margin-top: 100px;
+}
+.title{
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 30px;
+
+}
+
+.live{
+	margin: 30px 50px 100px 50px;
+	padding-bottom: 40px;
+}
+
+
+
+
+
+.teams{
+	margin-left: 100px;
+	margin-right: 30px;
+	display: grid;
+	grid-template-areas: "post-1 post-2 post-3 post-4 post-5"
+								"post-6 post-7 post-8 post-9 post-10";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.post{
+	background-color: #272424;
+	width: 200px;
+	height: 230px;
+}
+.post:hover{
+	border: 2px solid black;
+	box-shadow: 5px 10px lightgray;
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.text{
+	padding: 5px;
+	text-align: center;
+	font-size: 15px;
+	border-bottom: 3px outset white;
+}
+.fans{
+	padding-top: 12px;
+	text-align: center;
+}
+.teams__photo{
+	padding-top: 10px;
+	height: 133.5px;
+	padding-bottom: 10px;
+	border-bottom: 3px outset white;
+}
+.post1{
+	grid-area: post-1;
+}
+.post2{
+	grid-area: post-2;
+}
+.post3{
+	grid-area: post-3;
+}
+.post3 .photo{
+padding-left: 40px;
+}
+.post4{
+	grid-area: post-4;
+}
+.post5{
+	grid-area: post-5;
+}
+.post6{
+	grid-area: post-6;
+	margin-top: 20px;
+}
+.post6 .photo{
+	padding-left: 50px;
+}
+.post7{
+	grid-area: post-7;
+	margin-top: 20px;
+}
+.post7 .photo{
+	padding-left: 50px;
+}
+.post8{
+	grid-area: post-8;
+	margin-top: 20px;
+}
+.post8 .photo{
+	padding-left: 40px;
+}
+.post9{
+	grid-area: post-9;
+	margin-top: 20px;
+}
+.post10{
+	grid-area: post-10;
+	margin-top: 20px;
+}
+.post10 .photo{
+	padding-left: 40px;
+}
+
+
+@media(max-width:1050px){
+
+
+	.teams{
+		display: grid;
+		grid-template-areas: "post-1 post-2 post-3"
+									"post-4 post-5 post-6"
+									"post-7 post-8 post-9";
+	  grid-template-rows: 1fr 1fr 1fr;
+	  grid-template-columns: 1fr 1fr 1fr ;
+	}
+	.post1{
+		grid-area: post-1;
+	}
+	.post2{
+		grid-area: post-2;
+	}
+	.post3{
+		grid-area: post-3;
+	}
+	.post4{
+		grid-area: post-4;
+	}
+	.post5{
+		grid-area: post-5;
+	}
+	.post6{
+		grid-area: post-6;
+		margin-top: auto;
+	}
+	.post7{
+		grid-area: post-7;
+	}
+	.post8{
+		grid-area: post-8;
+	}
+	.post9{
+		grid-area: post-9;
+	}
+	.post10{
+		grid-area: post-10;
+	}
+ }
+
+ @media(max-width:870px){
+
+ }
+
+ 
+ 
