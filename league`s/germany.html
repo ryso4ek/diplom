@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/league.css">
+	<title>EPL</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="main">
+			<div class="nav">
+				<div class="logo">
+					<p>logo</p>
+				</div>
+				<div class="list">
+					<ul>
+						<li class="nav__list"> <a href="../index.html" class="nav__menu"> Главная</li></a>
+						<li class="nav__list"><a href="england.html" nav__menu>Англия</a></li>
+						<li class="nav__list"> <a href="spain.html">Испания</a></li>
+						<li class="nav__list"> <a href="italy.html" class="nav__menu">Италия</a></li>
+						<li class="nav__list">Германия</li>
+						<li class="nav__list"> <a href="france.html" class="nav__menu">Франция</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content">
+
+				<h1 class="heading">Матчи</h1>
+				<div class="matches">
+					<div id="wg-api-football-fixtures" data-host="v3.football.api-sports.io" data-refresh="60" data-date=""
+						data-league="78" data-team="" data-season="2021" data-last="" data-next="9"
+						data-key="06e579cb3495c840201e0e7869b648b7" data-theme="dark" data-show-errors="false"
+						class="api_football_loader">
+					</div>
+					<script type="module" src="https://widgets.api-sports.io/football/1.1.8/widget.js">
+					</script>
+				</div>
+
+				<h1 class="heading">Таблица лиги</h1>
+				<div id="wg-api-football-standings" data-host="v3.football.api-sports.io" data-league="78" data-team=""
+					data-season="2021" data-key="06e579cb3495c840201e0e7869b648b7" data-theme="grey" data-show-errors="false"
+					class="api_football_loader"></div>
+				<script type="module" src="https://widgets.api-sports.io/football/1.1.8/widget.js">
+				</script>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
