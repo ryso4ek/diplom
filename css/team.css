@@ -59,8 +59,7 @@ a{
 }
 
 .matches{
-	margin-left: 250px;
-	width: 600px;
+	margin: 0 50px;
 }
 .more{
 	color: black;

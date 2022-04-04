@@ -9,14 +9,15 @@
 	<title>footballsite</title>
 </head>
 
-<body>
 
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<div class="container">
 
 		<div class="main">
 			<div class="nav">
 				<div class="logo">
-					<a href="arsenal.html"><img src="../../img/ars.png" alt="#" class="nav__logo"></a>
+					<a href="arsenal.html"><img src="../../img/ars.png" alt="#" id="img" class="nav__logo"></a>
 				</div>
 				<div class="listing">
 					<ul class="list">
@@ -28,25 +29,17 @@
 					</ul>
 				</div>
 			</div>
+			<script>
 
-			<section id="match">
-				<div class="titles__title">Матчи<div>
-						<div class="matches">
-							<div id="wg-api-football-fixtures" data-host="v3.football.api-sports.io" data-refresh="60"
-								data-date="" data-league="39" data-team="42" data-season="2021" data-last="" data-next="3"
-								data-key="06e579cb3495c840201e0e7869b648b7" data-theme="dark" data-show-errors="false"
-								class="api_football_loader">
-							</div>
-						</div>
-
-						<div class="titles__title">Турнирная таблица</div>
-						<div class="league__table">
-							<div id="wg-api-football-standings" data-host="v3.football.api-sports.io" data-league="39"
-								data-team="" data-season="2021" data-key="06e579cb3495c840201e0e7869b648b7" data-theme=""
-								data-show-errors="false" class="api_football_loader"></div>
-						</div>
-					</div>
-			</section>
+				$(function () {
+					$.getJSON('t.json', function (data) {
+						console.log(data.response[1].team.name);
+						var n = data.response[0].team.image;
+						console.log(n);
+						document.getElementById("img").src = "/2.png";
+					});
+				});
+			</script>
 
 			<section id="sostav">
 				<div class="titles__title">Лучшие игроки</div>
@@ -58,7 +51,7 @@
 				<div class="stadium">
 					<h1 class="title__stadium">Стадион</h1>
 					<div class="photo__stadium">
-						<img src="../../img/emirates.jpg" alt="#" class="stadium__img">
+						<img id='stad_img' alt="#" class="stadium__img">
 					</div>
 					<div class="about__stadium">
 						<h1 class="stadium-info__title">Информация о стадионе</h1>
@@ -74,7 +67,14 @@
 					</div>
 				</div>
 			</section>
-
+			<script>
+				$(function () {
+					$.getJSON('t.json', function (data) {
+						console.log(data.response[0].team.name);
+						document.getElementById("stad_img").innerHTML = data.response[0].venue.image
+					});
+				});
+			</script>
 			<section id="Dost">
 				<h1 class="titles__title">Достижения</h1>
 				<div class="titles">
@@ -146,8 +146,7 @@
 			</section>
 		</div>
 	</div>
-	<script type="module" src="https://widgets.api-sports.io/football/1.1.8/widget.js">
-	</script>
+
 </body>
 
 </html>

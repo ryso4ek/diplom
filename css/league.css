@@ -21,3 +21,8 @@
 .table{
 	margin-bottom: 30px;
 }
+
+.table-league th:hover{
+	background-color: aqua;
+
+}
