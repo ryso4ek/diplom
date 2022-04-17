@@ -1,28 +1,32 @@
-
-.main{
+.main {
 	background-image: none;
 	background-color: black;
 	height: 105%;
 }
-.content{
-	margin: 100px 50px 0 50px;
+
+.content {
+	margin: 0px 50px 50px 50px;
 	background-color: black;
 }
-.heading{
-	margin-top: 30px;
+
+.heading {
+	margin-top: 20px;
 	text-align: center;
 	font-size: 24px;
 	margin-bottom: 40px;
 }
-.matches{
+
+.matches {
 	margin-top: 30px;
 	height: 100%;
 }
-.table{
+
+.table {
 	margin-bottom: 30px;
+
 }
 
-.table-league th:hover{
+.table-league th:hover {
 	background-color: aqua;
 
 }
